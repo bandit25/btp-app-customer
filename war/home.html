@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset=utf-8 />
+	
+	<title>Home</title>
+	
+	<link href="www/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="www/css/home.css" rel="stylesheet" type="text/css" />
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+ 
+  </head>
+
+<body>
+    <div class="container">
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">CLIST</a>
+				</div>
+				
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Admin <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+								<li><a href="list.html"><span class="glyphicon glyphicon-list-alt"></span>Orders</a></li>
+								<li class="divider"></li>
+								<li><a href="index.html"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+							</ul>
+						</li>       
+						
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span>Chats <span class="label label-primary">42</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">7:00 AM</span>Hi :)</a></li>
+								<li><a href="#"><span class="label label-warning">8:00 AM</span>How are you?</a></li>
+								<li><a href="#"><span class="label label-warning">9:00 AM</span>What are you doing?</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>
+            
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span>Notifications<span class="label label-info">32</span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="label label-warning">4:00 AM</span>Favourites Snippet</a></li>
+								<li><a href="#"><span class="label label-warning">4:30 AM</span>Email marketing</a></li>
+								<li><a href="#"><span class="label label-warning">5:00 AM</span>Subscriber focused email design</a></li>
+								<li class="divider"></li>
+								<li><a href="#" class="text-center">View All</a></li>
+							</ul>
+						</li>          
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Settings</h4>
+					</div>
+					<div class="modal-body">
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Chat</label></div>
+						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Notification</label></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<table class="table table-bordered table-hover" id="tab_logic">
+						<thead>
+							<tr >
+								<th class="text-center">#</th>
+								<th class="text-center">Item Name</th>
+								<th class="text-center">Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id='addr0'>
+								<td>1</td>
+								<td><input type="text" name='name0'  placeholder='Item Name' class="form-control"/></td>
+								<td><input type="text" name='mail0' placeholder='Quantity' class="form-control"/></td>
+							</tr>
+							<tr id='addr1'></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>			
+			<a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+		</div>
+		
+		<div class="text-center center-block">
+            <button type="button" class="btn btn-fresh text-uppercase btn-lg">Save</button>
+            <a href="order.html" class="btn btn-lg btn-primary">ORDER</a>
+        </div>
+		
+	</div>
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="www/js/bootstrap.js"></script>
+    <script src="www/js/home.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+        
+</body>
+</html>
+  
+  
+  <!--wrap the page content do not style this-->

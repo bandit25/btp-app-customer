@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+    <title>Login</title>	
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/signin.css" rel="stylesheet">   
+	
+  </head>
+ 
+<body>
+    <div class="container">
+
+		<div class="row" style="margin-top:20px">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+				<form role="form">
+					<fieldset>
+						<h2>Login</h2>
+						<hr class="colorgraph">
+						
+						<div class="form-group">
+							<input type="phone" name="phone" id="username" class="form-control input-lg" placeholder="Mobile Number">
+						</div>
+						
+						<div class="form-group">
+							<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+						</div>
+						
+						<span class="button-checkbox">
+							<button type="button" class="btn" data-color="info">Remember Me</button>
+							<input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+							
+							<a href="" data-toggle="modal" data-target="#myModal" class="btn btn-link pull-right">Forgot Password?</a>
+						</span>
+						
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Forgot Password</h4>
+										</div>
+														
+										<div class="modal-body">
+											<div class="form-group">
+												<input type="phone" name="user" id="user" class="form-control input-lg" placeholder="Mobile Number">
+											</div>
+										</div>
+														
+										<div class="modal-footer">
+											<button type="submit" id = "forgotpasswordbutton" class="btn btn-primary" data-dismiss="modal">Submit</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						
+						<hr class="colorgraph">
+        
+						<div class="row">						
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<form>
+									<input type="submit" id = "loginbutton" class="btn btn-lg btn-success btn-block" value="Sign In">
+								</form>
+							</div>
+							
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<a href="registration.html" class="btn btn-lg btn-primary btn-block">Register</a>
+							</div>							
+						</div>
+						
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!--<script type="text/javascript" src="www/js/index.js"></script>
+        <script type="text/javascript">app.initialize()</script>-->
+	<script src="phonegap.js"></script>
+	<script src="www/js/jquery-1.11.2.min.js"></script>
+	<script src="www/js/bootstrap.min.js"></script>
+    <script src="www/js/login.js"></script>
+	<script src="www/js/loginhandler.js"></script>
+	
+</body>
+</html>

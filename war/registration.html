@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+    <title>Title</title>
+    <link href="www/css/bootstrap.min.css" rel="stylesheet">
+    <link href="www/css/reg.css" rel="stylesheet">
+	
+  </head>
+
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+				<form role="form">
+				
+					<h2>Register</h2>
+					
+					<hr class="colorgraph">					
+						
+					<div class="form-group">
+						<input type="text" name="name" id="name" class="form-control input-lg" onBlur="name_validate()"  placeholder="Full Name" tabindex="1">
+						<div id="err_name" style="color:#F03"></div><br>
+					</div>					
+						
+					<div class="form-group">
+						<input type="phone" name="mobile" id="mobile" class="form-control input-lg" onBlur="mobile_validate()" placeholder="Mobile Number" tabindex="2">
+						<div id="err_mobile" style="color:#F03"></div><br>
+					</div>
+
+					<div class="form-group">
+						<input type="email" name="email" id="email" class="form-control input-lg" onBlur="email_validate()" placeholder="Email Address" tabindex="3">
+						<div id="err_email" style="color:#F03"></div><br>
+					</div>
+					
+					<div class="form-group">
+						<input type="text" name="address" id="address" class="form-control input-lg" onBlur="address_validate()" placeholder="Address" tabindex="4">
+						<div id="err_address" style="color:#F03"></div><br>
+					</div>
+						
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" name="password" id="password" class="form-control input-lg" onBlur="password_validate()" placeholder="Password" tabindex="5">
+								<div id="err_password" style="color:#F03"></div><br>
+							</div>
+						</div>
+							
+						<div class="col-xs-12 col-sm-6 col-md-6">
+							<div class="form-group">
+								<input type="password" name="repassword" id="repassword" class="form-control input-lg" onBlur="repassword_validate()" placeholder="Confirm Password" tabindex="6">
+								<div id="err_repassword" style="color:#F03"></div><br>
+							</div>
+						</div>
+					</div>
+					
+                    <hr class="colorgraph">
+					
+					<div class="row">
+						<div class="col-xs-12 col-md-6"><input type="submit" id = "registerbutton" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+    </div>
+	
+	<script src = "www/js/jquery-1.11.2.min.js"></script>   
+    <script src = "www/js/bootstrap.min.js"></script>
+    <script type ="text/javascript" src = "www/js/signupvalidation.js"></script>
+	<script type ="text/javascript" src = "www/js/signuphandler.js"></script>
+                        
+</body>
+</html>

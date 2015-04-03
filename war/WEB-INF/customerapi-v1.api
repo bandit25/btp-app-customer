@@ -1,0 +1,153 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://btp-app.appspot.com/_ah/api",
+  "name" : "customerapi",
+  "version" : "v1",
+  "description" : "testapi",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://btp-app.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "customerapi.updateCustomer" : {
+      "path" : "customer",
+      "httpMethod" : "PUT",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.test.CustomerAPI.updateCustomer",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "customerapi.deleteCustomer" : {
+      "path" : "customer/{no}",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.test.CustomerAPI.deleteCustomer",
+      "request" : {
+        "parameters" : {
+          "no" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "customerapi.getCustomer" : {
+      "path" : "customer/{no}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.test.CustomerAPI.getCustomer",
+      "request" : {
+        "parameters" : {
+          "no" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "customerapi.insertCustomer" : {
+      "path" : "customer",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.example.test.CustomerAPI.insertCustomer",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Customer" : {
+        "id" : "Customer",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "number" : {
+            "type" : "string"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "password" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.example.test.CustomerAPI.updateCustomer" : {
+        "request" : {
+          "$ref" : "Customer"
+        },
+        "response" : {
+          "$ref" : "Customer"
+        }
+      },
+      "com.example.test.CustomerAPI.deleteCustomer" : {
+      },
+      "com.example.test.CustomerAPI.getCustomer" : {
+        "response" : {
+          "$ref" : "Customer"
+        }
+      },
+      "com.example.test.CustomerAPI.insertCustomer" : {
+        "request" : {
+          "$ref" : "Customer"
+        },
+        "response" : {
+          "$ref" : "Customer"
+        }
+      }
+    }
+  }
+}
