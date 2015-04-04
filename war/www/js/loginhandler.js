@@ -2,18 +2,20 @@
 $(document).ready(function(){	
 	
 	
-	$("#loginbutton").click(function(){
+	$('#loginbutton').click(function(){
+		var number = $("#username").val();
+		var password = $("#password").val();
 		$.post("Login",
-			  {number: $("#username").val() , 
-			   password: $("#password").val() },
-			  function(data,status,xhr){
+			   {number: number, 
+			    password: password },
+			   function(data,status,xhr){
 				  if(xhr.getResponseHeader("AUTH")==1){
-					  var json = JSON.parse(data);					  
+					  var json = JSON.parse(data);	
 					  window.localStorage.setItem("user", json.number);
 					  window.localStorage.setItem("username", json.name);
 					  window.localStorage.setItem("useraddress", json.address);
 					  window.localStorage.setItem("useremail", json.email);
-					  window.location.replace("/home.html");
+					  window.location.replace("home.html");
 			   }else{
 				   alert(data);
 			   }

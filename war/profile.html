@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login</title>
+    <title>Home</title>
     <link href="www/css/bootstrap.min.css" rel="stylesheet">
     <link href="www/css/profile.css" rel="stylesheet">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -125,14 +125,12 @@
 													<div class="modal-body">
 														<div class="form-group">
 															<label>New Password<br>
-																<input type="password" name="password" id="password" class="form-control input-lg" onBlur="password_validate()" placeholder="Password" tabindex="5">
-																<div id="err_password" style="color:#F03"></div>
+																<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5"required title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="myModal2.field_repassword.pattern = this.value;">
 															</label>
 														</div>
 														<div class="form-group">
 															<label>Re-type Password<br>
-																<input type="password" name="repassword" id="repassword" class="form-control input-lg" onBlur="repassword_validate()" placeholder="Confirm Password" tabindex="6">
-																<div id="err_repassword" style="color:#F03"></div>
+																<input type="password" name="repassword" id="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="6" required title = "Please enter the same Password.">															
 															</label>
 														</div>
 													</div>
@@ -157,23 +155,20 @@
 													<div class="modal-body">
 														<div class="form-group">
 															<label>Full Name<br>
-																<input type="text" name="first_name" id="name" class="form-control input-lg" onBlur="name_validate()"  placeholder="Full Name" tabindex="1">
-																<div id="err_name" style="color:#F03"></div>
+																<input type="text" id="name" class="form-control input-lg" onBlur="name_validate()"  placeholder="Full Name" tabindex="1" required pattern="[a-zA-Z\s]+" title ="Name should only consists of alphabets and/or spaces">
 															</label>
 														</div>
 														
 														<div class="form-group">
 															<label>Email Id<br>
-																<input type="email" name="email" id="email" class="form-control input-lg" onBlur="email_validate()" placeholder="Email Address" tabindex="4">
-																<div id="err_email" style="color:#F03"></div>
+																<input type="email" id="email" class="form-control input-lg" onBlur="email_validate()" placeholder="Email Address" tabindex="3" required>
 															</label>
 														</div>
 														
 														<div class="form-group">
 															<label>Address<br>
-																<input type="text" name="address" id="locality" class="form-control input-lg" onBlur="address_validate()" placeholder="Address" tabindex="4">
-																<div id="err_address" style="color:#F03"></div>
-															</label>
+																<input type="text" id="address" class="form-control input-lg" onBlur="address_validate()" placeholder="Address" tabindex="4" required>
+														</label>
 														</div>
 													</div>
 													
@@ -193,7 +188,7 @@
 			</div>
 		</div>
 		
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="www/js/jquery-1.11.2.min.js"></script>
     <script src="www/js/bootstrap.min.js"></script>
     <script src="www/js/profile.js"></script>
     <script type ="text/javascript" src = "www/js/signupvalidation.js"></script>
