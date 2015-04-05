@@ -16,7 +16,7 @@
     <div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-				<form role="form">
+				<form role="form" id="regform">
 				
 					<h2>Register</h2>
 					
@@ -41,13 +41,13 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-								<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5"required title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.field_repassword.pattern = this.value;">
+								<input type="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5" required title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="form.field_repassword.pattern = this.value">
 							</div>
 						</div>
 							
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							<div class="form-group">
-								<input type="password" name ="repassword" id="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="6"required title = "Please enter the same Password.">
+								<input type="password" name ="repassword" id="repassword" class="form-control input-lg" placeholder="Confirm Password" tabindex="6" required title = "Please enter the same Password.">
 							</div>
 						</div>
 					</div>
@@ -55,7 +55,8 @@
                     <hr class="colorgraph">
 					
 					<div class="row">
-						<div class="col-xs-12 col-md-6"><input type="button" id = "registerbutton" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+						<div class="col-xs-12 col-md-6">
+						<button type="button" id = "registerbutton" class="btn btn-primary btn-block btn-lg" tabindex="7">Register</button></div>
 					</div>
 					
 				</form>

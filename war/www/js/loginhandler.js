@@ -1,11 +1,16 @@
 
-$(document).ready(function(){	
-	
+$(document).ready(function(){
+
 	
 	$('#loginbutton').click(function(){
+		
+	if (navigator.connection.type == Connection.NONE){
+		alert('No Internet Connection Available');
+
+	}else{
 		var number = $("#username").val();
 		var password = $("#password").val();
-		$.post("Login",
+		$.post("https://2-dot-btp-app.appspot.com/Login",
 			   {number: number, 
 			    password: password },
 			   function(data,status,xhr){
@@ -15,21 +20,21 @@ $(document).ready(function(){
 					  window.localStorage.setItem("username", json.name);
 					  window.localStorage.setItem("useraddress", json.address);
 					  window.localStorage.setItem("useremail", json.email);
-					  window.location.replace("home.html");
+					  window.location.href ="home.html";
 			   }else{
 				   alert(data);
 			   }
 			 }
-			);		
+			);	
+	  }
 	});
 	
 	$("#forgotpasswordbutton").click(function(){
 		
-		var user = document.getElementById('user');
-							
+		var user = $("#user").val();	
 				$.ajax({  
 					type: "POST",  
-					url: "ForgotPassword",
+					url: "https://2-dot-btp-app.appspot.com/ForgotPassword",
 					data: {user:user },
 					success:function(data,status,xhr){
 								if(data){

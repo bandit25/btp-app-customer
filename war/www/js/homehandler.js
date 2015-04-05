@@ -3,13 +3,9 @@ $(document).ready(function(){
 
 	$("#logoutbutton").click(function(){
 		
-		var user = window.localStorage.getItem("user");
-		if(user==null){
-			alert("Login first");
-		}else{		
 			window.localStorage.setItem("user", null);
 			window.localStorage.clear();
-			window.location.replace("/index.html");	
+			window.location.href= "index.html";	
 		}
 		
 	});
