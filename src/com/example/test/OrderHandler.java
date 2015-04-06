@@ -47,6 +47,7 @@ public class OrderHandler extends HttpServlet {
 			throws ServletException, IOException {
 		
 		String customer_id = req.getParameter("user");
+		String customer_name = req.getParameter("username");
 		String list = req.getParameter("list");
 		String deliveryno = req.getParameter("deliveryno");
 		String deliveryaddress = req.getParameter("deliveryaddress");
@@ -55,6 +56,7 @@ public class OrderHandler extends HttpServlet {
 		
 		Order order = new Order();
 		order.setCustomer_id(customer_id);
+		order.setCustomer_name(customer_name);
 		order.setList(list);
 		order.setDeliveryno(deliveryno);
 		order.setDeliveryaddress(deliveryaddress);
@@ -69,6 +71,7 @@ public class OrderHandler extends HttpServlet {
 				JSONObject json = new JSONObject();
 	        	json.put("orderid", o.getId());
 	        	json.put("number", o.getCustomer_id());
+	        	json.put("name", o.getCustomer_name());
 	        	json.put("list", o.getList());
 	        	json.put("deliveryno", o.getDeliveryno());
 	        	json.put("deliveryaddress", o.getDeliveryaddress());

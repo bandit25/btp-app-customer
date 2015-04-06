@@ -2,12 +2,8 @@
 $(document).ready(function(){
 
 	
-	$('#loginbutton').click(function(){
-		
-	if (navigator.connection.type == Connection.NONE){
-		alert('No Internet Connection Available');
-
-	}else{
+	$('#loginbutton').click(function(){		
+	
 		var number = $("#username").val();
 		var password = $("#password").val();
 		$.post("https://2-dot-btp-app.appspot.com/Login",
@@ -26,7 +22,6 @@ $(document).ready(function(){
 			   }
 			 }
 			);	
-	  }
 	});
 	
 	$("#forgotpasswordbutton").click(function(){

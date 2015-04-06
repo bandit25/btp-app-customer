@@ -159,6 +159,9 @@
           "customer_id" : {
             "type" : "string"
           },
+          "customer_name" : {
+            "type" : "string"
+          },
           "list" : {
             "type" : "string"
           },

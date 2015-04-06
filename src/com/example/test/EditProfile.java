@@ -18,7 +18,7 @@ public class EditProfile extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		if(req.getParameter("editprofile")!=null){
+		if(Integer.parseInt(req.getParameter("state"))==0){
 			
 			String number = req.getParameter("number");
 			String name = req.getParameter("name");
@@ -37,6 +37,7 @@ public class EditProfile extends HttpServlet {
 		           	json.put("name", c.getName());
 		        	json.put("address", c.getAddress());
 		        	json.put("email", c.getEmail());
+		        	json.put("message", "Profile Successfully updated");
 		            PrintWriter out= resp.getWriter();
 		            out.print(json);
 		            resp.addHeader("AUTH", "1");
@@ -51,7 +52,7 @@ public class EditProfile extends HttpServlet {
 			}
 		
 		}
-		else if(req.getParameter("editpassword")!=null){
+		else if(Integer.parseInt(req.getParameter("state"))==1){
 			
 			 String password = req.getParameter("password");
 			 String number = req.getParameter("number");
