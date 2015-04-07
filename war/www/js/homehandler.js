@@ -6,11 +6,9 @@ $(document).ready(function(){
 			window.localStorage.setItem("user", null);
 			window.localStorage.clear();
 			window.location.href= "index.html";	
-		}
-		
-	});
-	
-	
+			
+		});
+			
 	
 	$("#getordersbutton").click(function(){
 		
