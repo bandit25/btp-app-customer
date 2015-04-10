@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-	$("#logoutbutton").click(function(){
+	$("#logout").click(function(){
 		
 			window.localStorage.setItem("user", null);
 			window.localStorage.clear();
@@ -10,22 +10,23 @@ $(document).ready(function(){
 		});
 			
 	
-	$("#getordersbutton").click(function(){
+	$("#getplacedorders").click(function(){
 		
 		var user = window.localStorage.getItem("user");
 			if(user==null){
-				alert("Login first");
+				window.location.href= "index.html";	
 			}else{
 				
 				$.ajax({  
 					type: "GET",  
-					url: "OrderHandler",
+					url: "https://2-dot-btp-app.appspot.com/OrderHandler",
 					data: {user:user },
 					success:function(data,status,xhr){
 								if(xhr.getResponseHeader("AUTH")==1){
 									var json = JSON.parse(data);
 									var cursorstring = json.nextPageToken;
-									alert(json.orderlist);
+									alert(json.orderslist);
+									window.location.href="orderslist.html";
 								}else{
 									alert("error");
 								}  
@@ -34,29 +35,4 @@ $(document).ready(function(){
 			}
 	 });
 	
-	$("#placeorderbutton").click(function(){
-		
-		var user = window.localStorage.getItem("user");
-			if(user==null){
-				alert("Login first");
-			}else{
-				
-				$.ajax({  
-					type: "POST",  
-					url: "OrderHandler",
-					data: { user: user,
-						    list: "milk 1l",
-						    deliveryno: "99999",
-						    deliveryaddress: "daiict"},
-					success:function(data,status,xhr){
-								if(data){
-									alert(data);
-								}else{
-									alert(data);
-								}  
-	    					 }					
-				}); 						
-			}
-	 });
-
 });

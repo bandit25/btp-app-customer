@@ -32,7 +32,7 @@ public class OrderHandler extends HttpServlet {
 			Gson gson = new Gson();
 			String str = gson.toJson(orders.getItems());
 			json.put("nextPageToken",orders.getNextPageToken());
-			json.put("orderlist", str);
+			json.put("orderslist", str);
 			PrintWriter out= resp.getWriter();
 	        out.print(json);
 	        resp.addHeader("AUTH", "1");
@@ -46,6 +46,8 @@ public class OrderHandler extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
+		if(req.getParameter("action").equals("post")){
+			
 		String customer_id = req.getParameter("user");
 		String customer_name = req.getParameter("username");
 		String list = req.getParameter("list");
@@ -91,10 +93,9 @@ public class OrderHandler extends HttpServlet {
 			
 		}
 		
-	}
+	
 	//function to handle cancellation of order
-	protected void doDelete(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+		}else if(req.getParameter("action").equals("delete")) {
 		
 		String orderx = req.getParameter("orderid");
 		Long order_id = Long.parseLong(orderx);
@@ -103,6 +104,10 @@ public class OrderHandler extends HttpServlet {
 			Order order = oapi.getOrder(order_id);
 			if(order.getState()==0){
 				oapi.removeOrder(order_id);
+				PrintWriter out= resp.getWriter();
+		        out.println("Order Successfully Deleted");
+		        resp.addHeader("AUTH", "1");
+				
 			}else{
 				 PrintWriter out= resp.getWriter();
 		         out.println("The order could not be deleted as it has been acknowledged by shopkeeper");
@@ -113,6 +118,8 @@ public class OrderHandler extends HttpServlet {
 			
 		}
 	}
-		
+	
+  }	
+	
 
 }

@@ -24,7 +24,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">CLIST</a>
+					<a class="navbar-brand" href="home.html">CLIST</a>
 				</div>
 				
 				<div class="navbar-collapse collapse">
@@ -34,9 +34,9 @@
 							<ul class="dropdown-menu">
 								<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
 								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
-								<li><a href="list.html"><span class="glyphicon glyphicon-list-alt"></span>Orders</a></li>
+								<li><a href="orderslist.html" id ="getplacedorders"><span class="glyphicon glyphicon-list-alt"></span>Orders</a></li>
 								<li class="divider"></li>
-								<li><a href="index.html"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+								<li><a href="index.html" id ="logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
 							</ul>
 						</li>       
 						
@@ -132,8 +132,8 @@
 								<table class="table table-condensed">
 									<thead>
 										<tr>
-											<td><strong>Item</strong></td>
-											<td class="text-center"><strong>Quantity</strong></td>
+											<strong><th>Item</th></strong>
+											<strong><th class="text-center">Quantity</th></strong>
 										</tr>
 									</thead>
 									
@@ -161,8 +161,8 @@
 			</div>
 		
 			<div class="text-center center-block">
-				<form action="home.html">
-					<button type="submit" class="btn btn-fresh text-uppercase btn-lg">Confirm</button>
+				<form>
+					<button type="button" id = "placeorderbutton" class="btn btn-fresh text-uppercase btn-lg">Confirm</button>
 				</form>
 			</div>
 			
@@ -171,6 +171,8 @@
 	
 	<script src="www/js/jquery-1.11.2.min.js"></script>
     <script src="www/js/bootstrap.min.js"></script>
+	<script src="www/js/orderhandler.js"></script>
+	<script src="www/js/homehandler.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
     
 </body>
