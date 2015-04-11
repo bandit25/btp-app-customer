@@ -1,127 +1,220 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<meta charset=utf-8 />
-	
-	<title>Home</title>
-	
-	<link href="www/css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="www/css/home.css" rel="stylesheet" type="text/css" />
-	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
- 
-  </head>
-
+<head>
+ <link href="www/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="www/css/home.css" rel="stylesheet" type="text/css" />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+ <meta charset=utf-8 />
+ <title>Home</title>
+</head>
 <body>
-    <div class="container">
-		<div class="navbar navbar-default navbar-static-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="home.html">CLIST</a>
-				</div>
-				
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-					
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Admin <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
-								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
-								<li><button id="getplacedorders"><span class="glyphicon glyphicon-list-alt"></span>Orders</button></li>
-								<li><a href= "index.html" id= "logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
-							</ul>
-						</li>       
-						
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span>Chats <span class="label label-primary">42</span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><span class="label label-warning">7:00 AM</span>Hi :)</a></li>
-								<li><a href="#"><span class="label label-warning">8:00 AM</span>How are you?</a></li>
-								<li><a href="#"><span class="label label-warning">9:00 AM</span>What are you doing?</a></li>
-								<li class="divider"></li>
-								<li><a href="#" class="text-center">View All</a></li>
-							</ul>
-						</li>
-            
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-envelope"></span>Notifications<span class="label label-info">32</span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><span class="label label-warning">4:00 AM</span>Favourites Snippet</a></li>
-								<li><a href="#"><span class="label label-warning">4:30 AM</span>Email marketing</a></li>
-								<li><a href="#"><span class="label label-warning">5:00 AM</span>Subscriber focused email design</a></li>
-								<li class="divider"></li>
-								<li><a href="#" class="text-center">View All</a></li>
-							</ul>
-						</li>          
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</div>
-		
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Settings</h4>
-					</div>
-					<div class="modal-body">
-						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Chat</label></div>
-						<div class="checkbox"><label><input type="checkbox" data-toggle="toggle">Notification</label></div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
-				</div>
-			</div>
-		</div>
+<div class="container">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">CLIST</a>
+                </div>
+                
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Admin <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+                                <li><button id="getplacedorders"><span class="glyphicon glyphicon-list-alt"></span>Orders</button></li>
+                                <li><a href= "index.html" id= "logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+                            </ul>
+                        </li>     
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                    class="glyphicon glyphicon-comment"></span>Chats <span class="label label-primary">42</span>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="label label-warning">7:00 AM</span>Hi :)</a></li>
+                        <li><a href="#"><span class="label label-warning">8:00 AM</span>How are you?</a></li>
+                        <li><a href="#"><span class="label label-warning">9:00 AM</span>What are you doing?</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" class="text-center">View All</a></li>
+                    </ul>
+                </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                    class="glyphicon glyphicon-envelope"></span>Notifications<span class="label label-info">32</span>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="label label-warning">4:00 AM</span>Favourites Snippet</a></li>
+                        <li><a href="#"><span class="label label-warning">4:30 AM</span>Email marketing</a></li>
+                        <li><a href="#"><span class="label label-warning">5:00 AM</span>Subscriber focused email
+                            design</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#" class="text-center">View All</a></li>
+                    </ul>
+                </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Settings</h4>
+      </div>
+      <div class="modal-body">
+     <div class="checkbox">
+  <label>
+    <input type="checkbox" data-toggle="toggle">
+    Chat
+  </label>
+</div>
+<div class="checkbox">
+  <label>
+    <input type="checkbox" data-toggle="toggle">
+    Notification
+  </label>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-		<div class="container">
-			<div class="row clearfix">
-				<div class="col-md-12 column">
-					<table class="table table-bordered table-hover" id="tab_logic">
-						<thead>
-							<tr >
-								<th class="text-center">#</th>
-								<th class="text-center">Item Name</th>
-								<th class="text-center">Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id='addr0'>
-								<td>1</td>
-								<td><input type="text" name='name0'  placeholder='Item Name' class="form-control"/></td>
-								<td><input type="text" name='mail0' placeholder='Quantity' class="form-control"/></td>
-							</tr>
-							<tr id='addr1'></tr>
-						</tbody>
-					</table>
-				</div>
-			</div>			
-			<a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
-		</div>
-		
-		<div class="text-center center-block">
-            <button type="button" class="btn btn-fresh text-uppercase btn-lg">Save</button>
-            <a href="ordersummary.html" class="btn btn-lg btn-primary">ORDER</a>
+<div class="container">
+    <div class="row clearfix">
+    <div class="col-md-12 column">
+     <table id="dataTable" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                        <th class="text-center checkboxTd">Select</th>
+                        <th class="text-center">Item</th>
+                        <th class="text-center">Quantity</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="rowData">
+                            <td class="checkboxTd"><INPUT type="checkbox" name="chk"/></td>
+                            <td><INPUT type="text" name="text1" class="form-control item" placeholder="Item" value="" onchange="$(this).attr('value',this.value)"></td>
+                            <td><INPUT type="text" name="txt2" class="form-control quantity" placeholder="Quantity" value="" onchange="$(this).attr('value',this.value)"></td>
+
+                            </tr>
+                            </tbody>
+                    </table>
+
+         <div id="Input">
+                        <INPUT class="btn btn-default pull-left" id="AddRow" type="button" value="Add Row" onclick="addRow('dataTable')" />
+                        <INPUT class="pull-right btn btn-default" id="DeleteRow" type="button" value="Delete Row(s)" onclick="deleteRow('dataTable')" />
+
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="text-center center-block">
+            <button type="button" class="btn btn-fresh text-uppercase" onclick="startExec()" >SAVE</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1" onclick="abc()">
+                      ORDER NOW
+                    </button>
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirm Order</h4>
+      </div>
+      <div class="modal-body">
+      <div class="container">
+    <div class="row">
+                <h3 class="pull-left">Order # 12345</h3>
+                </div>
+            <div class="row">
+                <div class="text-left">
+                    <address>
+                    <strong>Shipped To:</strong><br>
+                        Keval Shah<br>
+                        DAIICT<br>
+                        HOR MEN D-211<br>
+                        Gandhinagar
+                    </address>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-left">
+                    <address>
+                        <strong>Mobile Number</strong><br>
+                        8460441891<br>
+                    </address>
+                </div>
+                <div class="text-left">
+                    <address>
+                        <strong>Order Date:</strong><br>
+                        March 7, 2014<br><br>
+                    </address>
+                </div>
+            </div>
         </div>
-		
-	</div>
-	
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="www/js/jquery-1.11.2.min.js"></script>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Order summary</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed" id="mytable">
+                            <thead>
+                                <tr>
+                                    <td><strong>Item</strong></td>
+                                    <td class="text-center"><strong>Quantity</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                <tr id="addr0">
+                                    <td>BS-200</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                                <tr>
+                                    <td>BS-400</td>
+                                    <td class="text-center">3</td>
+                                </tr>
+                                <tr>
+                                    <td>BS-1000</td>
+                                    <td class="text-center">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <form>
+                    <button type="button" id = "placeorderbutton" class="btn btn-fresh text-uppercase btn-lg">Confirm</button>
+                </form>
+</div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+    </div>
+    </div>
+       <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="www/js/jquery-1.11.2.min.js"></script>
     <script src="www/js/bootstrap.js"></script>
+    <script src="www/js/orderhandler.js"></script>
     <script src="www/js/home.js"></script>
     <script src="www/js/homehandler.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
-        
 </body>
-</html>
-  
-  
-  <!--wrap the page content do not style this-->
