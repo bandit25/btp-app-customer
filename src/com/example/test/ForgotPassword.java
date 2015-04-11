@@ -15,20 +15,20 @@ public class ForgotPassword extends HttpServlet {
 		
 		try{
 			
-			String userId = req.getParameter("user");
-			CustomerAPI capi = new CustomerAPI();
-			Customer c = capi.getCustomer(userId);
-			String email = c.getEmail();
-		
-			TokenAPI tapi = new TokenAPI();
-			Token tokenobj = tapi.insertToken(userId);
-			String token = tokenobj.getUUID();
-			tapi.sendEmail(email, token);
-			PrintWriter out= resp.getWriter();
-            out.println("email has been sent");
-			
+				String userId = req.getParameter("user");
+				CustomerAPI capi = new CustomerAPI();
+				Customer c = capi.getCustomer(userId);
+				String email = c.getEmail();
+				
+				TokenAPI tapi = new TokenAPI();
+				Token tokenobj = tapi.insertToken(userId);
+				String token = tokenobj.getUUID();
+				tapi.sendEmail(email, token);
+				PrintWriter out= resp.getWriter();
+				out.println("Follow the instructions in the sent Email to reset your password.");
+						
 		}catch(Exception e){
-			System.out.println(e);
+			throw new ServletException(e);
 		}	
 	}
 

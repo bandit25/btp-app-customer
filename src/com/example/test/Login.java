@@ -53,11 +53,11 @@ public class Login extends HttpServlet {
 		                   
 		        }else{
 		            PrintWriter out= resp.getWriter();
-		            out.println("Either user name or password is wrong");
+		            out.println("Invalid Username or Password");
 		            resp.addHeader("AUTH", "0");
                 }
 		    }catch(Exception e){
-		        System.out.println(e);
+		        throw new ServletException(e);
 		    }
 		
 	}

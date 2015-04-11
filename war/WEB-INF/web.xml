@@ -54,17 +54,36 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>TestServlet</servlet-name>
-		<servlet-class>com.example.test.TestServlet</servlet-class>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>TestServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>TestServlet</servlet-name>
-		<url-pattern>/TestServlet</url-pattern>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
 	</servlet-mapping>
+	
+  	<error-page>
+	    <error-code>404</error-code>
+	    <location>/TestServlet</location>
+  	</error-page>   
+  	<error-page>
+	  	<exception-type>javax.servlet.ServletException</exception-type>
+	  	<location>/TestServlet</location>
+  	</error-page>
+  
+  	<error-page>
+	    <error-code>403</error-code>
+	    <location>/TestServlet</location>
+  	</error-page>   
+  	<error-page>
+	  	<exception-type>javax.io.IOException</exception-type>
+	  	<location>/TestServlet</location>
+  	</error-page>
 	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	
  <servlet>
   <servlet-name>SystemServiceServlet</servlet-name>
   <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>

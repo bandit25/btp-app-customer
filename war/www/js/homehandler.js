@@ -4,7 +4,9 @@ $(document).ready(function(){
 	$("#logout").click(function(){
 		
 			window.localStorage.setItem("user", null);
-			window.localStorage.clear();
+			window.localStorage.setItem("username", null);
+			window.localStorage.setItem("useraddress", null);
+			window.localStorage.setItem("useremail", null);
 			window.location.href= "index.html";	
 			
 		});
@@ -28,7 +30,7 @@ $(document).ready(function(){
 									alert(json.orderslist);
 									window.location.href="orderslist.html";
 								}else{
-									alert("error");
+									alert("Error. Please Try Again");
 								}  
 	    					 }					
 				}); 						

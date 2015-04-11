@@ -31,12 +31,8 @@ $(document).ready(function(){
 					type: "POST",  
 					url: "https://2-dot-btp-app.appspot.com/ForgotPassword",
 					data: {user:user },
-					success:function(data,status,xhr){
-								if(data){
-									alert(data);
-								}else{
-									alert(data);
-								}  
+					success:function(data,status,xhr){								
+									alert(data);								  
 	    					 }					
 				}); 						
 	});

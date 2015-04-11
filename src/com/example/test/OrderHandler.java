@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.api.server.spi.response.CollectionResponse;
-import com.google.appengine.labs.repackaged.org.json.JSONArray;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 
 
 
+@SuppressWarnings("serial")
 public class OrderHandler extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -39,7 +38,7 @@ public class OrderHandler extends HttpServlet {
 			
 			
 		}catch(Exception e){
-			
+			throw new ServletException(e);
 		}
 	}
 	//function to handle placing of order
@@ -70,27 +69,17 @@ public class OrderHandler extends HttpServlet {
 			Order o = oapi.insertOrder(order);
 			if(o!=null){
 				
-				JSONObject json = new JSONObject();
-	        	json.put("orderid", o.getId());
-	        	json.put("number", o.getCustomer_id());
-	        	json.put("name", o.getCustomer_name());
-	        	json.put("list", o.getList());
-	        	json.put("deliveryno", o.getDeliveryno());
-	        	json.put("deliveryaddress", o.getDeliveryaddress());
-	        	json.put("state", o.getState());
-	        	json.put("timestamp", o.getTimestamp());
-	        	json.put("message", "Order Successfully Placed");
 	            PrintWriter out= resp.getWriter();
-	            out.print(json);
+	            out.print("Order Successfully Placed");
 	            resp.addHeader("AUTH", "1");
 	        }else{
 	        	PrintWriter out= resp.getWriter();
-	            out.println("There was some error.Please try again");
+	            out.println("Error.Please try again");
 	            resp.addHeader("AUTH", "0");
 			}
 			
 		}catch(Exception e){
-			
+			throw new ServletException(e);
 		}
 		
 	
@@ -115,7 +104,7 @@ public class OrderHandler extends HttpServlet {
 			}
 				
 		}catch(Exception e){
-			
+			throw new ServletException(e);
 		}
 	}
 	
