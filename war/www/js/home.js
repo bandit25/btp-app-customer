@@ -127,14 +127,14 @@ function printData(data) {
          }
      }
 function abc(){
-    console.log('clicked');
-var tableHTML = document.getElementById("dataTable").innerHTML;
-window.localStorage["sharedTable"] = tableHTML;
-document.getElementById("mytable").innerHTML = tableHTML;
+ //   console.log('clicked');
+	var tableHTML = document.getElementById("dataTable").innerHTML;
+	window.localStorage["sharedTable"] = tableHTML;
+	document.getElementById("mytable").innerHTML = tableHTML;
 }
 
 $(function(){
-  console.log(localStorage.sharedTable);
+//  console.log(localStorage.sharedTable);
   if(typeof localStorage.sharedTable !== 'undefined' && localStorage.sharedTable.length){
     document.getElementById("dataTable").innerHTML = localStorage.sharedTable;
   }

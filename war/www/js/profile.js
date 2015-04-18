@@ -33,5 +33,8 @@ $(document).ready(function() {
     });
 });
 var local = window.localStorage;
-window.localStorage.setItem("key", "Keval");
-document.getElementById("title").innerHTML = window.localStorage.getItem("key");
+document.getElementById("title").innerHTML = window.localStorage.getItem("username");
+document.getElementById("user_name").innerHTML = window.localStorage.getItem("username");
+document.getElementById("user_address").innerHTML = window.localStorage.getItem("useraddress");
+document.getElementById("user_email").innerHTML = window.localStorage.getItem("useremail");
+document.getElementById("user_no").innerHTML = window.localStorage.getItem("user");

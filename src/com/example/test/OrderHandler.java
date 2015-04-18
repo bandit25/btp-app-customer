@@ -29,14 +29,14 @@ public class OrderHandler extends HttpServlet {
 			
 			JSONObject json = new JSONObject();
 			Gson gson = new Gson();
-			String str = gson.toJson(orders.getItems());
+			String str = gson.toJson(orders.getItems());			
 			json.put("nextPageToken",orders.getNextPageToken());
 			json.put("orderslist", str);
 			PrintWriter out= resp.getWriter();
 	        out.print(json);
 	        resp.addHeader("AUTH", "1");
-			
-			
+	        
+						
 		}catch(Exception e){
 			throw new ServletException(e);
 		}

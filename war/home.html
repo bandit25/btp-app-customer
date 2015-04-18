@@ -28,7 +28,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
                                 <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
-                                <li><button id="getplacedorders"><span class="glyphicon glyphicon-list-alt"></span>Orders</button></li>
+                                <li><a href="orderslist.html" id="getplacedorders"><span class="glyphicon glyphicon-list-alt"></span>Orders</button></li>
                                 <li><a href= "index.html" id= "logout"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
                             </ul>
                         </li>     
@@ -133,34 +133,34 @@
       </div>
       <div class="modal-body">
       <div class="container">
-    <div class="row">
-                <h3 class="pull-left">Order # 12345</h3>
-                </div>
+    
             <div class="row">
                 <div class="text-left">
-                    <address>
-                    <strong>Shipped To:</strong><br>
-                        Keval Shah<br>
-                        DAIICT<br>
-                        HOR MEN D-211<br>
-                        Gandhinagar
-                    </address>
+                    <div class="form-group">
+                    <label>Full Name<br>
+                    <input type="text" id="customer_name" name="name" class="form-control input-lg" placeholder="Full Name" tabindex="1">
+                     </label>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="text-left">
-                    <address>
-                        <strong>Mobile Number</strong><br>
-                        8460441891<br>
-                    </address>
+                     <div class="form-group">
+                    <label>Mobile Number<br>
+                    <input type="text" id="deliveryno" name="no" class="form-control input-lg" placeholder="Mobile Number" tabindex="1">
+                    </label>
+                    </div>
                 </div>
+                </div>
+                <div class="row">
                 <div class="text-left">
-                    <address>
-                        <strong>Order Date:</strong><br>
-                        March 7, 2014<br><br>
-                    </address>
+                     <div class="form-group">
+                    <label>Address<br>
+                    <input type="text" id="deliveryaddress" name="address" class="form-control input-lg" placeholder="Delivery Address" tabindex="1">                    
+                    </label>
+                    </div>
                 </div>
-            </div>
+                </div>
         </div>
 
     <div class="row">
@@ -174,8 +174,8 @@
                         <table class="table table-condensed" id="mytable">
                             <thead>
                                 <tr>
-                                    <td><strong>Item</strong></td>
-                                    <td class="text-center"><strong>Quantity</strong></td>
+                                    <strong><th>Item</th></strong>
+                                    <strong><th class="text-center">Quantity</th></strong>
                                 </tr>
                             </thead>
                             <tbody>
@@ -210,7 +210,16 @@
       </div>
     </div>
     </div>
-       <script src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript">
+	var ele5=document.getElementById("customer_name");
+	ele5.value=window.localStorage.getItem("username");
+	var ele6=document.getElementById("deliveryno");
+	ele6.value=window.localStorage.getItem("user");
+	var ele7=document.getElementById("deliveryaddress");
+	ele7.value=window.localStorage.getItem("useraddress");
+	</script>
+	
+       
     <script src="www/js/jquery-1.11.2.min.js"></script>
     <script src="www/js/bootstrap.js"></script>
     <script src="www/js/orderhandler.js"></script>

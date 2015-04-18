@@ -7,6 +7,7 @@ $(document).ready(function(){
 		var number = $("#username").val();
 		var password = $("#password").val();
 		$.post("https://2-dot-btp-app.appspot.com/Login",
+				//"Login",
 			   {number: number, 
 			    password: password },
 			   function(data,status,xhr){
@@ -30,6 +31,7 @@ $(document).ready(function(){
 				$.ajax({  
 					type: "POST",  
 					url: "https://2-dot-btp-app.appspot.com/ForgotPassword",
+					//url: "ForgotPassword",
 					data: {user:user },
 					success:function(data,status,xhr){								
 									alert(data);								  

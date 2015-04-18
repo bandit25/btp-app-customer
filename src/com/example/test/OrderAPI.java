@@ -34,7 +34,7 @@ public class OrderAPI {
 		q.setFilter("customer_id == noParam");
 		q.declareParameters("String noParam");
 		q.setOrdering("timestamp desc");
-		q.setRange(0, 7);
+		//q.setRange(0, 7);
 		try{
 			
 			if (cursorString != null && cursorString != "") {

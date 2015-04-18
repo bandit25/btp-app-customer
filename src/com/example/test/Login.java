@@ -57,7 +57,7 @@ public class Login extends HttpServlet {
 		            resp.addHeader("AUTH", "0");
                 }
 		    }catch(Exception e){
-		        throw new ServletException(e);
+		        System.out.println(e);
 		    }
 		
 	}

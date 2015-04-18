@@ -53,14 +53,7 @@
 		<url-pattern>/OrderHandler</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>TestServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/TestServlet</url-pattern>
-	</servlet-mapping>
+	
 	
   	<error-page>
 	    <error-code>404</error-code>
